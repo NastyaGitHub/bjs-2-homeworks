@@ -61,9 +61,5 @@ function worker2(arr) {
     }
   }
 
-  if (Math.abs(max) > Math.abs(min)) {
-    return Math.abs(max) - Math.abs(min);
-  }
-
-  return Math.abs(min) - Math.abs(max);
+  return Math.abs(max - min);
 }
