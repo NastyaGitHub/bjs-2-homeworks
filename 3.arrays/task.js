@@ -1,17 +1,9 @@
 function compareArrays(arr1, arr2) {
-  let result;
-  if (arr1.length === arr2.length) {
-    result = arr1.every((index) => {
-      if (arr1[index] === arr2[index]) {
-        return true;
-      }
-      return false;
-    });
-  } else {
-    return false;
-  }
   // Ваш код
-
+  const result = arr1.every((value, index) => {
+    return ((arr1.length === arr2.length) && (value === arr2[index]));
+  });
+  
   return result; // boolean
 }
 
