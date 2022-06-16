@@ -13,21 +13,27 @@ Student.prototype.setSubject = function (subjectName) {
 Student.prototype.addMark = function (mark) {
   
   if (this.marks === undefined) {
-    this.addMark = mark;
-    console.log('Marks: no');
+    this.marks = mark;
     // добавить первую оценку
   } else {
-    Student.prototype.addMarks = function (mark1,...mark3) {
-      this.addMarks = mark;
+    Student.prototype.addMarks = function (...marks) {
+      this.marks.push(...marks);
     };
     // добавить вторую и последующие оценки в массив
   }
 };
 Student.prototype.getAverage = function () {
-  this.getAverage = avg;
-  let sum = function(mark1,...mark3) { return mark1+mark3 };
-  let avg = addmark.reduce(sum)/data.length;
+  let sum = marks.reduce(function(a, b) { return a + b; }, 0);
+  let average = addmark.reduce(sum)/this.marks.length;
+  this.getAverage = average;
 }
+Student.prototype.exclude = function(reason) {
+  if (average > 2) {
+    console.log ('ok')
+  } else {
+    this.exclude = reason;
+  }
+};
 
 
 
